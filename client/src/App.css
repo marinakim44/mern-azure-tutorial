@@ -18,6 +18,8 @@
 
 .testRead {
   text-align: center;
+  position: flex;
+  float: right;
 }
 
 .app-banner {
