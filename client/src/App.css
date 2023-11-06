@@ -3,6 +3,19 @@
   overflow: hidden;
 }
 
+.background {
+  position: absolute;
+  z-index: 0;
+  pointer-events: auto;
+}
+
+.foreground {
+  position: relative;
+  z-index: 1;
+  /* display: inline-block; */
+  float: left;
+}
+
 .app-banner {
   height: 5vh;
 }

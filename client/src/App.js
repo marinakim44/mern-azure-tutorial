@@ -5,7 +5,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
-import { AppBanner} from './components'
+import { AppBanner, LeftSideBar } from './components'
 
 function App() {
   const navigate = useNavigate();
@@ -20,20 +20,26 @@ function App() {
 
   return (
     <div className="App">
-      <AppBanner/>
-      <h1>READ THIS</h1>
+      <AppBanner />
+      <LeftSideBar />
 
-      {users &&
-        users.length > 0 &&
-        users.map((user) => {
-          return (
-            <div>
-              <h3>
-                {user.name} {user.lastName}
-              </h3>
-            </div>
-          );
-        })}
+      <div className="background">
+        <h1>READ THIS</h1>
+        {users &&
+          users.length > 0 &&
+          users.map((user) => {
+            return (
+              <div>
+                <h3>
+                  {user.name} {user.lastName}
+                </h3>
+              </div>
+            );
+          })}
+      </div>
+      <div className="foreground">
+        <LeftSideBar />
+      </div>
 
       <button onClick={() => navigate("create")}>Create</button>
     </div>
