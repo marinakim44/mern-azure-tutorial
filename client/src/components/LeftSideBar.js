@@ -24,10 +24,10 @@ export default function LeftSideBar() {
             <div className="bg-light border-right" id="left-sidebar-wrapper">
                 {/* <div className="left-sidebar-heading">Menu</div> */}
                 <div className="list-group list-group-flush">
-                    <p className="list-group-item list-group-item-action bg-light">Option</p>
-                    <p className="list-group-item list-group-item-action bg-light">Option</p>
-                    <p className="list-group-item list-group-item-action bg-light">Option</p>
-                    <p className="list-group-item list-group-item-action bg-light">Option</p>
+                    <p className="list-group-item list-group-item-action bg-light">Options</p>
+                    <p className="list-group-item list-group-item-action bg-light">Click the pencil to collapse</p>
+                    <p className="list-group-item list-group-item-action bg-light">Mongo tests are hiding under the sidebar</p>
+                    <p className="list-group-item list-group-item-action bg-light">collapse to see</p>
                     <p className="list-group-item list-group-item-action bg-light">Option</p>
                     <p className="list-group-item list-group-item-action bg-light">Option</p>
                 </div>
