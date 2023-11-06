@@ -1,38 +1,60 @@
 .App {
   text-align: center;
+  overflow: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app-banner {
+  height: 5vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.navbar {
+  min-height: 5vh;
+}
+
+/* This for the collapsable Sidebar menus */
+/* Left sidebar */
+#left-wrapper {
+  overflow-x: hidden;
+}
+
+#left-sidebar-wrapper {
+  min-height: 95vh;
+  margin-left: -15rem;
+  -webkit-transition: margin .25s ease-out;
+  -moz-transition: margin .25s ease-out;
+  -o-transition: margin .25s ease-out;
+  transition: margin .25s ease-out;
+}
+
+#left-sidebar-wrapper .sidebar-heading {
+  padding: 0.875rem 1.25rem;
+  font-size: 1.2rem;
+}
+
+#left-sidebar-wrapper .list-group {
+  width: 15rem;
+}
+
+#left-wrapper.toggled #left-sidebar-wrapper {
+  margin-left: 0;
+}
+
+@media (min-width: 768px) {
+  #left-sidebar-wrapper {
+    margin-left: 0;
+  }
+
+  #left-wrapper.toggled #left-sidebar-wrapper {
+    margin-left: -15rem;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#left-menu-toggle {
+  height: 5vh;
+  width: 2vh;
+  color: black;
+  /* border-radius: 0px; */
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/* Right sidebar */

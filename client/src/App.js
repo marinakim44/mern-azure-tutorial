@@ -5,6 +5,8 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
+import { AppBanner} from './components'
+
 function App() {
   const navigate = useNavigate();
   const [users, setUsers] = useState([]);
@@ -18,6 +20,7 @@ function App() {
 
   return (
     <div className="App">
+      <AppBanner/>
       <h1>READ THIS</h1>
 
       {users &&
