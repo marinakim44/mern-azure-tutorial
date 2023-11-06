@@ -21,7 +21,6 @@ function App() {
   return (
     <div className="App">
       <AppBanner />
-      <LeftSideBar />
 
       <div className="background">
         <div className="testRead">
