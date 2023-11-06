@@ -16,6 +16,10 @@
   float: left;
 }
 
+.testRead {
+  text-align: center;
+}
+
 .app-banner {
   height: 5vh;
 }

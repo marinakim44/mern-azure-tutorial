@@ -24,18 +24,20 @@ function App() {
       <LeftSideBar />
 
       <div className="background">
-        <h1>READ THIS</h1>
-        {users &&
-          users.length > 0 &&
-          users.map((user) => {
-            return (
-              <div>
-                <h3>
-                  {user.name} {user.lastName}
-                </h3>
-              </div>
-            );
-          })}
+        <div className="testRead">
+          <h1>READ THIS</h1>
+          {users &&
+            users.length > 0 &&
+            users.map((user) => {
+              return (
+                <div>
+                  <h3>
+                    {user.name} {user.lastName}
+                  </h3>
+                </div>
+              );
+            })}
+        </div>
       </div>
       <div className="foreground">
         <LeftSideBar />
