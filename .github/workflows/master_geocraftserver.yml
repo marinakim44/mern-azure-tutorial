@@ -24,13 +24,6 @@ jobs:
       - name: npm install, build, and test
         run: |
           npm install
-          npm install -g nodemon
-          npm install node-gyp -g    
-          install bcrypt -g    
-          npm install bcrypt --save
-          npm install jsonwebtoken --save
-          npm i cookie-parser
-          npm i body-parser  
           npm run build --if-present
 
       - name: Zip artifact for deployment
