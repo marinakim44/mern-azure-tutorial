@@ -4,7 +4,7 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 const port = process.env.PORT || 3001;
 const path = require('path')
-const AuthController = require('../controllers/auth-controller')
+const AuthController = require('./controllers/auth-controller.js')
 
 const app = express();
 
@@ -17,20 +17,11 @@ mongoose
   .catch((err) => console.log(err));
 
 
-app.use(express.static('./client/build'))
-app.get('*', (req,res) =>{
-  res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
-})
-
-app.listen(port, () => {
-  console.log(`Server is running on post ${port}`);
-});
-
 // Auth routes
-router.post('/register', AuthController.registerUser)
-router.post('/login', AuthController.loginUser)
-router.get('/logout', AuthController.logoutUser)
-router.get('/loggedIn', AuthController.getLoggedIn)
+app.post('/register', AuthController.registerUser)
+app.post('/login', AuthController.loginUser)
+app.get('/logout', AuthController.logoutUser)
+app.get('/loggedIn', AuthController.getLoggedIn)
 // app.get("/get-users", (req, res) => {
 //   User.find()
 //     .then((users) => res.json(users))
@@ -49,4 +40,12 @@ router.get('/loggedIn', AuthController.getLoggedIn)
 //     .then((user) => res.json(user))
 //     .catch((err) => console.log(err));
 // });
+app.use(express.static('./client/build'))
+app.get('*', (req,res) =>{
+  res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
+})
+
+app.listen(port, () => {
+  console.log(`Server is running on post ${port}`);
+});
 
