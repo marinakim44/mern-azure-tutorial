@@ -18,28 +18,28 @@ mongoose
 
 
 // Auth routes
-// app.post('/register', AuthController.registerUser)
-// app.post('/login', AuthController.loginUser)
-// app.get('/logout', AuthController.logoutUser)
-// app.get('/loggedIn', AuthController.getLoggedIn)
-app.get("/get-users", (req, res) => {
-  User.find()
-    .then((users) => res.json(users))
-    .catch((err) => console.log(err));
-});
+app.post('/register', AuthController.registerUser)
+app.post('/login', AuthController.loginUser)
+app.get('/logout', AuthController.logoutUser)
+app.get('/loggedIn', AuthController.getLoggedIn)
+// app.get("/get-users", (req, res) => {
+//   User.find()
+//     .then((users) => res.json(users))
+//     .catch((err) => console.log(err));
+// });
 
-app.post("/create", (req, res) => {
-  //save to mongodb and send response
-  const newUser = new User({
-    name: req.body.name,
-    lastName: req.body.lastName,
-  });
+// app.post("/create", (req, res) => {
+//   //save to mongodb and send response
+//   const newUser = new User({
+//     name: req.body.name,
+//     lastName: req.body.lastName,
+//   });
 
-  newUser
-    .save()
-    .then((user) => res.json(user))
-    .catch((err) => console.log(err));
-});
+//   newUser
+//     .save()
+//     .then((user) => res.json(user))
+//     .catch((err) => console.log(err));
+// });
 app.use(express.static('./client/build'))
 app.get('*', (req,res) =>{
   res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
