@@ -4,7 +4,7 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 const port = process.env.PORT || 3001;
 const path = require('path')
-const AuthController = require('./controllers/auth-controller.js')
+const AuthController = require('./controllers/auth-controller')
 
 const app = express();
 
