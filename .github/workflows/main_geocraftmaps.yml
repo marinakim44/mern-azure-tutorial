@@ -59,9 +59,9 @@ jobs:
         uses: azure/webapps-deploy@v2
         id: deploy-to-webapp
         with:
-          app-name: 'GeoCraftMaps'
+          app-name: 'testttttapp'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_8941A85804FF42A1A7E4C071AF6D95B8 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_933ac3513e0d42af914d72adf573381b }}
           package: release.zip
           
       - name: 'Delete Zip'
