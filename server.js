@@ -27,10 +27,10 @@ app.listen(port, () => {
 });
 
 // Auth routes
-router.post('/register', AuthController.registerUser)
-router.post('/login', AuthController.loginUser)
-router.get('/logout', AuthController.logoutUser)
-router.get('/loggedIn', AuthController.getLoggedIn)
+app.post('/register', AuthController.registerUser)
+app.post('/login', AuthController.loginUser)
+app.get('/logout', AuthController.logoutUser)
+app.get('/loggedIn', AuthController.getLoggedIn)
 // app.get("/get-users", (req, res) => {
 //   User.find()
 //     .then((users) => res.json(users))
